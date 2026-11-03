@@ -438,6 +438,42 @@ footer.legal p{max-width:80ch}
   </div>
 </section>
 
+<!-- Formulario de clientes potenciales -->
+<section class="section tint" id="solicita-servicio">
+  <style>
+    .lf{background:#fff;border:1px solid #e3e7f0;border-radius:20px;padding:24px;box-shadow:0 10px 30px rgba(10,30,70,.08);max-width:760px;margin:0 auto;text-align:left}
+    .lf h3{margin:0 0 4px;font-size:1.3rem}.lf .lf-sub{margin:0 0 16px;color:#4a5568}
+    .lf-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.lf-full{grid-column:1/-1}
+    .lf label{display:flex;flex-direction:column;gap:6px;font-size:.9rem;font-weight:600}
+    .lf input,.lf select,.lf textarea{font:inherit;font-weight:400;padding:11px 12px;border:1px solid #cfd6e4;border-radius:12px;background:#f8f9fc}
+    .lf .lf-ok{flex-direction:row;align-items:flex-start;gap:8px;font-weight:400;font-size:.85rem;color:#4a5568}.lf .lf-ok input{margin-top:3px}
+    .lf button{margin-top:16px;width:100%;padding:14px;border:0;border-radius:999px;background:#c8102e;color:#fff;font-weight:700;font-size:1rem;cursor:pointer}
+    .lf button:hover{background:#0b2a6b}
+    .lf .lf-note{margin:12px 0 0;font-size:.8rem;color:#6b7280}
+    @media(max-width:640px){.lf-grid{grid-template-columns:1fr}}
+  </style>
+  <div class="wrap">
+    <form class="lf reveal" name="solicitud-servicio" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="solicitud-servicio">
+      <input type="hidden" name="origen" value="baaevahispanicfamilydocuments.com - Formulario principal (Solicita tu servicio)">
+      <p hidden><label>No llenar: <input name="bot-field"></label></p>
+      <h3>Solicita tu servicio</h3>
+      <p class="lf-sub">Déjanos tus datos y te contactamos en español para orientarte sobre el servicio que necesitas.</p>
+      <div class="lf-grid">
+        <label>Nombre completo*<input name="nombre" required autocomplete="name"></label>
+        <label>Teléfono / WhatsApp*<input name="telefono" type="tel" required autocomplete="tel"></label>
+        <label>Correo electrónico<input name="email" type="email" autocomplete="email"></label>
+        <label>Ciudad / Estado<input name="ciudad"></label>
+        <label class="lf-full">¿Qué servicio necesitas?*<select name="servicio" required><option>Formularios y documentos de inmigración</option><option>Traducciones</option><option>Impuestos personales</option><option>Impuestos de negocio</option><option>Bookkeeping / payroll</option><option>ITIN (Certifying Acceptance Agent)</option><option>Notaría</option><option>Seguros (BAAEVA Insurance)</option><option>Otro</option></select></label>
+        <label class="lf-full">Cuéntanos brevemente qué necesitas<textarea name="mensaje" rows="3"></textarea></label>
+        <label class="lf-full lf-ok"><input type="checkbox" name="acepto" value="si" required> Acepto que BAAEVA Hispanic Family Documents me contacte por teléfono, WhatsApp o correo sobre mi solicitud.</label>
+      </div>
+      <button type="submit">Enviar solicitud</button>
+      <p class="lf-note">No somos abogados y no ofrecemos asesoría legal. No somos CPA. Asistimos en el llenado de formularios y la preparación de documentos.</p>
+    </form>
+  </div>
+</section>
+
 </main>
 
 <section class="contact" id="contacto">
@@ -447,7 +483,8 @@ footer.legal p{max-width:80ch}
       <h2>Agenda tu <em>consulta de servicios</em></h2>
       <p class="lead">Cuéntanos qué necesitas y te orientamos sobre el servicio adecuado. Atendemos familias, trabajadores independientes y pequeños negocios.</p>
       <div class="hero-actions">
-        <a class="btn btn-red" href="tel:8138302874">Llamar a Yamile</a>
+        <a class="btn btn-red" href="#solicita-servicio">Solicitar servicio</a>
+        <a class="btn btn-glass" href="tel:8138302874">Llamar a Yamile</a>
         <a class="btn btn-glass" href="tel:8138302858">Llamar a Ernesto</a>
       </div>
     </div>
